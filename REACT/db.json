@@ -1,74 +1,9 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "nombre",
-      "email": "coreo"
-    },
-    {
-      "id": "2602",
-      "usuario": "marilyn",
-      "contraseña": "1234",
-      "correo": "marilyn@gmail.com"
-    },
-    {
-      "id": "f6d4",
-      "usuario": "hola",
-      "contraseña": "12",
-      "correo": "hola@gmail.com"
-    },
-    {
-      "id": "a892",
-      "usuario": "hola",
-      "contraseña": "12",
-      "correo": "hola@gmail.com"
-    },
-    {
-      "id": "0f0e",
-      "usuario": "hola",
-      "contraseña": "12",
-      "correo": "hola@gmail.com"
-    },
-    {
-      "id": "b36b",
-      "usuario": "hola",
-      "contraseña": "12",
-      "correo": "hola@gmail.com"
-    },
-    {
-      "id": "762f",
-      "usuario": "hola",
-      "contraseña": "12",
-      "correo": "hola@gmail.com"
-    },
-    {
-      "id": "5e8d",
-      "usuario": "kim",
-      "contraseña": "mmm",
-      "correo": "kim@gamil.com"
-    },
-    {
-      "id": "83ac",
-      "usuario": "",
-      "contraseña": "",
-      "correo": ""
-    },
-    {
-      "id": "a5d2",
-      "usuario": "dvsdfv",
-      "contraseña": "224",
-      "correo": "sc<c"
-    },
-    {
-      "id": "7f01",
-      "usuario": "",
-      "contraseña": "",
-      "correo": ""
-    },
-    {
-      "id": "fc4b",
-      "name": "",
-      "completed": ""
+      "id": "4e39",
+      "name": "marilyn",
+      "completed": false
     }
   ]
 }

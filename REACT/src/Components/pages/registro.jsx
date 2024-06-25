@@ -8,18 +8,24 @@ const Regis = () => {
   const [correo, setcorreo] = useState('');
    const navigate = useNavigate();
 
-  const boton = async () => {
+   const boton = async () => {
+    
+    if (!usuario.trim() || !contraseña.trim() || !correo.trim()) {
+      alert('Por favor, complete todos los campos.');
+      return;
+    }
+
     try {
       const response = await postData(usuario, contraseña, correo);
       if (response) {
-        alert("Registro exitoso");
+        alert('Registro exitoso');
         navigate('/login');
       } else {
-        alert("Registro fallido");
+        alert('Registro fallido');
       }
     } catch (error) {
-      console.error("Error al enviar datos:", error);
-      alert("Error al intentar registrar");
+      console.error('Error al enviar datos:', error);
+      alert('Error al intentar registrar');
     }
   };
 
