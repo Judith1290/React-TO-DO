@@ -1,7 +1,9 @@
+
 const apiUrl = "http://localhost:3002/users";
-export let getData = async (id="") => {
+
+let getData = async (params = "") => {
   try {
-    let response = await fetch(apiUrl+id, {
+    const response = await fetch(`${apiUrl}${params}`, {
       method: "GET",
       mode: "cors",
       credentials: "same-origin",
@@ -9,15 +11,15 @@ export let getData = async (id="") => {
         "Content-Type": "application/json",
       },
     });
-    let data = await response.json();
+    const data = await response.json();
     return data;
-  } catch(e) {
-    console.log(e);
-    return null;
+  } catch (error) {
+    console.error("Error en la solicitud GET:", error);
+    throw error;
   }
-}
+};
 
-export let postData = async (tarea) => {
+let postData = async (name, completed) => {
   try {
     let response = await fetch(apiUrl, {
       method: "POST",
@@ -26,23 +28,22 @@ export let postData = async (tarea) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(
-
-
-        
-      )
+      body: JSON.stringify({
+        name: name,
+        completed: completed
+      })
     });
     let data = await response.json();
     return data;
-  } catch(e) {
+  } catch (e) {
     console.log(e);
     return null;
   }
-}
+};
 
-export let deleteData = async (id) => {
+let deleteData = async (id) => {
   try {
-    let response = await fetch(apiUrl+id, {
+    let response = await fetch(`${apiUrl}/${id}`, {
       method: "DELETE",
       mode: "cors",
       credentials: "same-origin",
@@ -52,15 +53,15 @@ export let deleteData = async (id) => {
     });
     let data = await response.json();
     return data;
-  } catch(e) {
+  } catch (e) {
     console.log(e);
     return null;
   }
-}
+};
 
-export let putData = async (obj) => {
+let putData = async (obj) => {
   try {
-    let response = await fetch(apiUrl+obj.id, {
+    let response = await fetch(`${apiUrl}/${obj.id}`, {
       method: "PUT",
       mode: "cors",
       credentials: "same-origin",
@@ -71,8 +72,10 @@ export let putData = async (obj) => {
     });
     let data = await response.json();
     return data;
-  } catch(e) {
+  } catch (e) {
     console.log(e);
     return null;
   }
-}
+};
+
+export { getData, postData, deleteData, putData };

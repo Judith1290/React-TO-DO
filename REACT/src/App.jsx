@@ -1,3 +1,4 @@
+import React from 'react'
 import Rutas from './Routes'
 import './App.css'
 
